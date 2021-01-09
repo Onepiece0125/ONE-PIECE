@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="550.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chatroom.client.controls.UpdateUIControl">
+   <children>
+      <Label layoutX="80.0" layoutY="55.0" text="昵称：" />
+      <TextField fx:id="userName" layoutX="140.0" layoutY="50.0" prefWidth="200.0" />
+      <Label layoutX="80.0" layoutY="115.0" text="性别：" />
+      <RadioButton fx:id="male" layoutX="140.0" layoutY="115.0" mnemonicParsing="false" prefWidth="40.0" text="男">
+         <toggleGroup>
+            <ToggleGroup fx:id="selectGender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="215.0" layoutY="115.0" mnemonicParsing="false" prefWidth="40.0" text="女" toggleGroup="$selectGender" />
+      <RadioButton fx:id="secret" layoutX="285.0" layoutY="115.0" mnemonicParsing="false" prefWidth="60.0" text="保密" toggleGroup="$selectGender" />
+      <Label layoutX="80.0" layoutY="175.0" text="生日：" />
+      <DatePicker fx:id="birthday" layoutX="140.0" layoutY="170.0" prefWidth="200.0" />
+      <Label layoutX="50.0" layoutY="235.0" text="电话号码：" />
+      <TextField fx:id="phoneNumber" layoutX="140.0" layoutY="230.0" prefWidth="200.0" />
+      <Label layoutX="50.0" layoutY="295.0" text="邮箱地址：" />
+      <TextField fx:id="email" layoutX="140.0" layoutY="290.0" prefWidth="200.0" />
+      <Label layoutX="50.0" layoutY="355.0" text="个性签名：" />
+      <TextArea fx:id="personalizedSignature" layoutX="140.0" layoutY="355.0" prefHeight="80.0" prefWidth="200.0" />
+      <Button layoutX="170.0" layoutY="475.0" mnemonicParsing="false" onAction="#saveAction" prefWidth="100.0" style="-fx-background-color: #99CCFF;" text="保存" textFill="WHITE" />
+      <Label fx:id="promptMessage" alignment="CENTER" layoutY="14.0" prefHeight="20.0" prefWidth="440.0" textFill="RED" />
+   </children>
+</AnchorPane>

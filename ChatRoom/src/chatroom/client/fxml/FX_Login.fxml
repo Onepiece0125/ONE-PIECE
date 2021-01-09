@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<AnchorPane prefHeight="370.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="chatroom.client.controls.LoginControl">
+    <ImageView fitHeight="370.0" fitWidth="435.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="/chatroom/client/images/Background01.png"/>
+    </ImageView>
+    <Label fx:id="promptMessage" alignment="CENTER" layoutY="135.0" prefHeight="20.0" prefWidth="435.0" textFill="RED"/>
+    <Label layoutX="83.0" layoutY="178.0" text="账号："/>
+    <TextField id="userId" fx:id="userIdentification" layoutX="136.0" layoutY="174.0" prefWidth="200.0"/>
+    <Label layoutX="83.0" layoutY="227.0" text="密码："/>
+    <PasswordField fx:id="userPassword" layoutX="136.0" layoutY="223.0" prefWidth="200.0"/>
+    <Button layoutX="170.0" layoutY="290.0" mnemonicParsing="false" onAction="#loginAction" prefWidth="100.0"
+            style="-fx-background-color:#99CCFF;" text="登录" textFill="WHITE"/>
+    <Button fx:id="registerButton" layoutY="352.0" mnemonicParsing="false" onAction="#registerAction"
+            onMouseEntered="#registerMouseEntered" onMouseExited="#registerMouseExited"
+            style="-fx-background-insets:0;&#10;-fx-background-color:WHITE;" text="注册账号">
+        <textFill>
+            <Color blue="0.749" green="0.749" red="0.749"/>
+        </textFill>
+    </Button>
+    <Button fx:id="retrieveButton" layoutX="349.0" layoutY="352.0" mnemonicParsing="false" onAction="#retrieveAction"
+            onMouseEntered="#retrieveMouseEntered" onMouseExited="#retrieveMouseExited"
+            style="-fx-background-insets:0;&#10;-fx-background-color:WHITE;" text="忘记密码">
+        <textFill>
+            <Color blue="0.749" green="0.749" red="0.749"/>
+        </textFill>
+    </Button>
+</AnchorPane>

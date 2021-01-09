@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="570.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="chatroom.client.controls.RegisterControl">
+    <Label fx:id="promptMessage" alignment="CENTER" layoutY="33.0" prefHeight="20.0" prefWidth="385.0" textFill="RED"/>
+    <Label layoutX="50.0" layoutY="80.0" text="昵称："/>
+    <TextField fx:id="userName" layoutX="110.0" layoutY="75.0" prefWidth="200.0"/>
+    <Label layoutX="50.0" layoutY="140.0" text="性别："/>
+    <RadioButton fx:id="male" layoutX="110.0" layoutY="140.0" mnemonicParsing="false" text="男">
+        <toggleGroup>
+            <ToggleGroup fx:id="selectGender"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="female" layoutX="180.0" layoutY="140.0" mnemonicParsing="false" text="女"
+                 toggleGroup="$selectGender"/>
+    <RadioButton fx:id="secret" layoutX="250.0" layoutY="140.0" mnemonicParsing="false" selected="true" text="保密"
+                 toggleGroup="$selectGender"/>
+    <Label layoutX="50.0" layoutY="200.0" text="生日："/>
+    <DatePicker fx:id="birthday" layoutX="110.0" layoutY="195.0" prefWidth="200.0"/>
+    <Label layoutX="20.0" layoutY="265.0" text="账号密码："/>
+    <PasswordField fx:id="userPassword" layoutX="110.0" layoutY="260.0" prefWidth="200.0"/>
+    <Label layoutX="20.0" layoutY="330.0" text="确认密码："/>
+    <PasswordField fx:id="confirmPwd" layoutX="110.0" layoutY="325.0" prefWidth="200.0"/>
+    <Label layoutX="35.0" layoutY="395.0" text="验证码："/>
+    <TextField fx:id="codeField" layoutX="110.0" layoutY="390.0" prefWidth="100.0"/>
+    <ImageView fx:id="verCodeImage" fitHeight="30.0" fitWidth="80.0" layoutX="230.0" layoutY="390.0"
+               onMouseClicked="#verCodeMouseClicked" pickOnBounds="true" preserveRatio="true"/>
+    <Button layoutX="138.0" layoutY="470.0" mnemonicParsing="false" onAction="#registerAction" prefWidth="100.0"
+            style="-fx-background-color: #99CCFF;" text="注册" textFill="WHITE"/>
+</AnchorPane>

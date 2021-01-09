@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="750.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="chatroom.client.controls.GroupChatControl">
+    <Label fx:id="addressee" prefHeight="40.0" prefWidth="900.0">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+    <ListView fx:id="messageListView" layoutY="40.0" prefHeight="515.0" prefWidth="765.0"/>
+    <Label layoutX="772.0" layoutY="167.0" prefHeight="30.0" prefWidth="114.0" text="成员列表："/>
+    <ListView id="numberList" fx:id="numberListView" layoutX="772.0" layoutY="197.0" prefHeight="317.0"
+              prefWidth="114.0"/>
+    <ImageView id="file" fitHeight="40.0" fitWidth="45.0" layoutX="125.0" layoutY="565.0" onMouseClicked="#fileMC"
+               pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/file-open.png"/>
+    </ImageView>
+    <ImageView id="film" fitHeight="40.0" fitWidth="45.0" layoutX="70.0" layoutY="565.0" onMouseClicked="#filmMC"
+               pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/film.png"/>
+    </ImageView>
+    <ImageView id="picture" fitHeight="40.0" fitWidth="45.0" layoutX="15.0" layoutY="565.0" onMouseClicked="#pictureMC"
+               pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/picture.png"/>
+    </ImageView>
+    <TextArea fx:id="messageTextArea" layoutX="15.0" layoutY="610.0" prefHeight="130.0" prefWidth="750.0"
+              style="-fx-font-size:20;" wrapText="true"/>
+    <Button layoutX="786.0" layoutY="706.0" mnemonicParsing="false" onAction="#sendAction" prefHeight="30.0"
+            prefWidth="100.0" style="-fx-background-color:#99CCFF;" text="发送" textFill="WHITE"/>
+</AnchorPane>
